@@ -6,14 +6,14 @@ export default function Entry() {
             <div className="main-image-container">
                 <img 
                     className="main-image"
-                    src="{marker}"
+                    src="https://www.quebec-cite.com/sites/otq/files/styles/landscape_wide_desktop/public/media/image/Old-Quebec.jpg"
                     alt=""
                 />
             </div>
             <div className="info-container">
                 <img 
                     className="marker"
-                    src="{marker}" 
+                    src={marker}
                     alt="map marker icon"
                 />
                 <span className="country">country</span>
