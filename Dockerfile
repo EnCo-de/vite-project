@@ -31,7 +31,7 @@ ENV GROUP_NGINX=10014
 WORKDIR /usr/share/nginx/html
 
 # Copy the built React app from the previous stage to the nginx web server directory
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Ensure proper permissions for NGINX to serve the files
 USER root
