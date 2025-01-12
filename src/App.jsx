@@ -10,7 +10,18 @@ function App() {
     <>
       <div>
         <Header />
-        <Entry />
+        <Entry
+            country="Japan"
+            title="Fuji"
+            dates="Autumn"
+            info="entry info-text"       
+        />
+        <Entry
+            country="Canada"
+            title="Quebec"
+            dates="Spring"
+            info="entry info-text"       
+        />
       </div>
     </>
   )
