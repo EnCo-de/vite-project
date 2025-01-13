@@ -13,10 +13,11 @@ body {
 header {
     background: #F55A5A;
     display: flex;
+    column-gap: 15px;
     justify-content: center;
     align-items: center;
     color: white;
-    height: 55px;
+    min-height: 55px;
 }
 
 header > img {
@@ -29,9 +30,17 @@ header > h1 {
     font-weight: 500;
 }
 
+.sub {
+    font-size: 1rem;
+    background: #F55A5A;
+    color: white;
+    text-align: center;
+}
+
 article.journal-entry {
     display: flex;
-    margin-bottom: 36px;
+    width: clamp(375px, 80%, 600px);
+    margin: 36px auto;
 }
 
 article.journal-entry .marker {
@@ -80,8 +89,8 @@ article.journal-entry .main-image {
 
 .info-container p.entry-text {
     line-height: 1.5;
+    text-align: justify;
     font-size: 0.8rem;
-    line-clamp: 3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  

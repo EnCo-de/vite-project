@@ -4,25 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import Entry from './components/Entry'
+import data from "./assets/data";
 
 function App() {
+  const entryComponents = data.map((entry) => <Entry
+    key={entry.id}
+    country={entry.country}
+    title={entry.title}
+    dates={entry.dates}
+    info={entry.text}    
+  />)
+
   return (
     <>
-      <div>
-        <Header />
-        <Entry
-            country="Japan"
-            title="Fuji"
-            dates="Autumn"
-            info="entry info-text"       
-        />
-        <Entry
-            country="Canada"
-            title="Quebec"
-            dates="Spring"
-            info="entry info-text"       
-        />
-      </div>
+      <Header />
+      <main className="container"> 
+        { entryComponents }
+      </main>         
     </>
   )
 }
