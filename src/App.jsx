@@ -9,6 +9,8 @@ import data from "./assets/data";
 function App() {
   const entryComponents = data.map((entry) => <Entry
     key={entry.id}
+    image={entry.img}
+    url={entry.googleMapsLink}
     country={entry.country}
     title={entry.title}
     dates={entry.dates}

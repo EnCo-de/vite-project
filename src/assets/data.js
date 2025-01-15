@@ -1,5 +1,17 @@
 export default [
     {
+        id: 4,
+        img: {
+            src: "https://www.quebec-cite.com/sites/otq/files/styles/landscape_wide_desktop/public/media/image/Old-Quebec.jpg",
+            alt: "Quebec"
+        },
+        title: "Quebec",
+        country: "Canada",
+        googleMapsLink: "https://maps.app.goo.gl/6RLYZDuuuqJ7kNGZ9",
+        dates: "12 Oct, 2020 - 24 Oct, 2022",
+        text: "Its character, charm and beauty are distinguished at every turn from exploring Old Québec—designated a UNESCO World Heritage Site in 1985—to the lively culture scene to the seasonal and local foods that highlight the very best of the region to the warm embrace locals use to invite strangers in."
+    },
+    {
         id: 1,
         img: {
             src: "https://scrimba.com/links/travel-journal-japan-image-url",
