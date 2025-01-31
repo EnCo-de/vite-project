@@ -2,9 +2,7 @@ import React from "react";
 
 export default function Ingredients() {
     const [ingredients, setIngredients] = React.useState(["chicken", "all the main spices", "corn", "heavy cream", "pasta"])
-    let ingredientsList = ingredients.map((ingredient) => {
-        <li key={ingredient}>{ingredient}</li>
-    })
+    let ingredientsList = ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)
     alert(ingredientsList)
 
     function handleSubmit(event) {
@@ -34,7 +32,7 @@ export default function Ingredients() {
                     <li key="{ingredient}">{ingredients}</li>
                     {
                         ingredients.map((ingredient) => {
-                            <li key={ingredient}>{ingredient}</li>
+                            return <li key={ingredient}>{ingredient}</li>
                         })
                     }
                 </ul>
