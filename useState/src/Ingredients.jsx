@@ -6,12 +6,18 @@ export default function Ingredients() {
         <li key={ingredient}>{ingredient}</li>
     ))
 
+    // utilise onSubmit event to handle form data
     function handleSubmit(event) {
         event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+        const ingredientForm = event.currentTarget
+        const formData = new FormData(ingredientForm)
         const newIngredient = formData.get("ingredient")
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+        ingredientForm.reset()
     }
+
+    // use form action capabilities instead, in react 19
+
 
     return (
         <main>
