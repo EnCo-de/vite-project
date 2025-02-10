@@ -16,12 +16,15 @@ export default function Ingredients() {
         ingredientForm.reset()
     }
 
-    // use form action capabilities instead, in react 19
-
+    // use form action capabilities in react 19 instead of onSubmit={handleSubmit}
+    function addIngredient(formData) {
+        const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+    }
 
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form  action={addIngredient} className="add-ingredient-form">
                 <input 
                     type="text" 
                     placeholder="cherry" 
@@ -34,7 +37,7 @@ export default function Ingredients() {
                 <h2>Ingredients on hand</h2>
                 <ul className="ingredients-list">{ingredientsList}</ul>
 
-                {props.ingredients.length > 3 && <div className="get-recipe-container">
+                {props.ingredients.length >= 3 && <div className="get-recipe-container">
                     <div>
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
