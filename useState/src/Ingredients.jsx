@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Ingredients() {
-    const [ingredients, setIngredients] = React.useState(["chicken", "all the main spices", "corn", "heavy cream", "pasta"])
+    const [ingredients, setIngredients] = React.useState([])
     const ingredientsList = ingredients.map((ingredient) => (
         <li key={ingredient}>{ingredient}</li>
     ))
@@ -37,12 +37,18 @@ export default function Ingredients() {
                 <h2>Ingredients on hand</h2>
                 <ul className="ingredients-list">{ingredientsList}</ul>
 
-                {ingredients.length >= 3 && <div className="get-recipe-container">
+                {ingredients.length >= 3
+                ? <div className="get-recipe-container">
                     <div>
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
-                    <button onClick={alert("getRecipe")}>Get a recipe</button>
+                    <button onClick={() => console.log("getRecipe")}>Get a recipe</button>
+                </div>
+                :  <div className="get-recipe-container">
+                    <div>
+                        <p>To offer a recipe you need at least 3 ingredients.</p>
+                    </div>
                 </div>}
             </section>}
         </main>
